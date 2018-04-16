@@ -1,4 +1,5 @@
- // include the library code:
+// include the library code:
+// test kommentar
 #include <LiquidCrystal.h>
 
 // initialize the library by associating any needed LCD interface pin
