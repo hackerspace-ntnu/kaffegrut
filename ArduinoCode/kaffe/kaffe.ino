@@ -2,7 +2,7 @@
 	FILNAVN: kaffe.ino
 	FORMÅL: Hovedlogikk som tracker kaffekanners kvalitet.
 	ORIGINALFORFATTER: Torstein Nordgård-Hansen
-	PÅBEGYNT: 2017
+	PÅBEGYNT: 2018
 	REQUIREMENTS: Arduino-mikrokontroller
 	NAVNGIVNING:
 	 * Skal baseres på suffix etter følgende kriterier:
