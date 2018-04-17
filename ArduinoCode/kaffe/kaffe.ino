@@ -1,5 +1,20 @@
-// include the library code:
-// test kommentar
+/*
+	FILNAVN: kaffe.ino
+	FORMÅL: Hovedlogikk som tracker kaffekanners kvalitet.
+	ORIGINALFORFATTER: Torstein Nordgård-Hansen
+	PÅBEGYNT: 2017
+	REQUIREMENTS: Arduino-mikrokontroller
+	NAVNGIVNING:
+	 * Skal baseres på suffix etter følgende kriterier:
+	 * Dersom en kaffekanne blir knust eller på annet vis må erstattes,
+	 * skal den følge samme navngivning som tidligere med tall etter romersk
+	 * tallsystem som indikerer generasjonen.
+	 * Eksempel: Finn III blir på tragisk vis skutt av en politi-robot i
+	 * fremtidens dystopiske samfunn, så da blir nye kannen døpt Finn IV. 
+	ENDRINGSLOGG: https://github.com/hackerspace-ntnu/kaffegrut
+ */
+
+// Inkluder LCD-bibliotek
 #include <LiquidCrystal.h>
 
 // initialize the library by associating any needed LCD interface pin
@@ -14,10 +29,12 @@ int matias = 0;
 void setup() {
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);
+
   // Print a message to the LCD.
   lcd.print("Finn jr:");
   lcd.setCursor(0, 1);
   lcd.print("Mathias:");
+
 
   pinMode(7, INPUT);
   pinMode(8, INPUT);
