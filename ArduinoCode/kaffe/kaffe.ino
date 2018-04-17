@@ -1,3 +1,4 @@
+
 /*
 	FILNAVN: kaffe.ino
 	FORMÅL: Hovedlogikk som tracker kaffekanners kvalitet.
