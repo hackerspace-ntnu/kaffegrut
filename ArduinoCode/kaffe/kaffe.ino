@@ -32,25 +32,23 @@ void setup() {
   lcd.begin(16, 2);
 
   // Print a message to the LCD.
-  lcd.print("Finn jr:");
+  lcd.print("Finn jr   :");
   lcd.setCursor(0, 1);
-  lcd.print("Mathias:");
+  lcd.print("Mathiasito:");
 
 
   pinMode(7, INPUT);
   pinMode(8, INPUT);
-
 }
 
 void loop() {
   getUpdate(&finn, &matias);
   
-  lcd.setCursor(9, 0);
+  lcd.setCursor(11, 0);
   lcd.print(hrTime((millis()/1000) , finn));
 
-  lcd.setCursor(9, 1);
-	// lcd.print(hrTime((millis()/1000) , matias));
-	lcd.print("Knust");
+  lcd.setCursor(11, 1);
+	lcd.print(hrTime((millis()/1000) , matias));
 }
 
 String hrTime(int seconds, int kanne){
@@ -58,7 +56,7 @@ String hrTime(int seconds, int kanne){
   int m = ((seconds - kanne)/60)%60;
 	int s = (seconds - kanne)%60;
   
-return ( (kanne == 0 || (seconds - kanne < 0)) ? "no time" : ( (h >= 5 ? " to old" : "  " + ( h > 9 ? (String)(h): "0"+(String)(h)) + ":" + ( m > 9 ? (String)(m): "0"+(String)(m)))));
+	return ( (kanne == 0 || (seconds - kanne < 0)) ? " N.A." : ( (h >= 5 ? "  old" :  ( h > 9 ? (String)(h): "0"+(String)(h)) + ":" + ( m > 9 ? (String)(m): "0"+(String)(m)))));
 }
 
 void getUpdate(int *finn, int *matias){
