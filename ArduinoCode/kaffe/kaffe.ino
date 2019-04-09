@@ -87,8 +87,9 @@ void getUpdate(int* kannetid, bool* kanneValid){
   *kanneValid = true;
 }
 
+
 bool isTime(){
-  if (millis() > 1000 + lastTime && millis() < 100000 + lastTime){
+  if (millis() > 1000 + lastTime){
     lastTime = millis();
     return true;
   }
